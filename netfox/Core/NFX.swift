@@ -22,6 +22,13 @@ let nfxVersion = podPlistVersion() ?? "0"
 
 @objc
 open class NFX: NSObject {
+    /// Change this value to `true` to show internal print logging in the console.
+    public var printLoggingEnabled: Bool = false
+    
+    public func nfxPrint(_ value: String) {
+        guard NFX.sharedInstance().printLoggingEnabled else { return }
+        print(value)
+    }
     
     // MARK: - Properties
     #if os(OSX)
