@@ -111,7 +111,7 @@ open class NFX: NSObject {
     }
     
     fileprivate func showMessage(_ msg: String) {
-        print("netfox \(nfxVersion) - [https://github.com/kasketis/netfox]: \(msg)")
+        nfxPrint("netfox \(nfxVersion) - [https://github.com/kasketis/netfox]: \(msg)")
     }
     
     internal func isEnabled() -> Bool {
